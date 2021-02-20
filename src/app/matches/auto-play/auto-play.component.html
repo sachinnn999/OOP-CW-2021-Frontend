@@ -1,0 +1,47 @@
+<div>
+    <h3>
+        UEFA League Manager 
+        <small class="text-muted">   {{title}}</small>
+    </h3>
+</div>
+<div class="row">
+    <div class="col-md-12 text-center align center"  style="padding: 2%;">
+        <button class="btn btn-primary" (click)="onBtnClick()">Play a Match!</button>
+    </div>
+</div>
+
+<div class="container"style="padding-top: 2%;" *ngIf="showMatchDetailsDiv">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center font-weight-bold">Played Date : {{matchDetails.playedDate | date:'dd-MM-yyyy'}}</p>
+            <p class="text-center font-weight-bold">Category : {{matchDetails.category}}</p>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 1%;">
+        <div class="col-md-5" >
+            <div class="card">
+                <h5 class="card-header">Team 01</h5>
+                <div class="card - body">
+                    <p class="text-center">Name : {{matchDetails.team1.name}}</p>
+                    <p class="text-center">Coach : {{matchDetails.team1.coachName}}</p>
+                    <h3 style="text-align: center">Score : {{matchDetails.team1Score}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="container">
+                <div class="text-center align center"><h1>Vs.</h1></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+                <h5 class="card-header">Team 02</h5>
+                <div class="card - body">
+                    <p class="text-center">Name : {{matchDetails.team2.name}}</p>
+                    <p class="text-center">Coach : {{matchDetails.team2.coachName}}</p>
+                    <h3 style="text-align: center">Score : {{matchDetails.team2Score}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

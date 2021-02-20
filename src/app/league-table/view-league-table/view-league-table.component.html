@@ -1,0 +1,133 @@
+<div>
+    <h3>
+        UEFA League Manager 
+        <small class="text-muted">   {{title}}</small>
+    </h3>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <div class="container">
+            <button type="button" class="btn btn-outline-primary" (click)="onSortBtnClick(sortByPoints)">Sort by Points</button>
+            <button type="button" class="btn btn-outline-primary" (click)="onSortBtnClick(sortByGoals)">Sort by Goals</button>
+            <button type="button" class="btn btn-outline-primary" (click)="onSortBtnClick(sortByWins)">Sort by Wins</button>
+        </div>
+    </nav>
+</div>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="card">
+        <h5 class="card-header">Club Level</h5>
+        <div class="card - body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ranking</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Coach Name</th>
+                            <th scope="col">Points</th>
+                            <th scope="col">Wins</th>
+                            <th scope="col">Defeats</th>
+                            <th scope="col">Draws</th>
+                            <th scope="col">Total Played</th>
+                            <th scope="col">Total Recieved Goals</th>
+                            <th scope="col">Total Scored Goals</th>
+                            <th scope="col">Joined Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor = "let element of clubLevel">
+                                <td>{{element.ranking}}</td>
+                                <td>{{element.name}}</td>
+                                <td>{{element.coachName}}</td>
+                                <td>{{element.points}}</td>
+                                <td>{{element.wins}}</td>
+                                <td>{{element.defeats}}</td>
+                                <td>{{element.draws}}</td>
+                                <td>{{element.numOfMatchesPlayed}}</td>
+                                <td>{{element.totalReceivedGoals}}</td>
+                                <td>{{element.totalScoredGoals}}</td>
+                                <td>{{element.dateJoined | date : 'dd-MM-yyyy'}}</td>
+                            </tr>
+                    </tbody> 
+                </table>  
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="card">
+        <h5 class="card-header">University Level</h5>
+        <div class="card - body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ranking</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Coach Name</th>
+                            <th scope="col">Points</th>
+                            <th scope="col">Wins</th>
+                            <th scope="col">Defeats</th>
+                            <th scope="col">Draws</th>
+                            <th scope="col">Total Played</th>
+                            <th scope="col">Total Recieved Goals</th>
+                            <th scope="col">Total Scored Goals</th>
+                            <th scope="col">Joined Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor = "let element of universityLevel">
+                                <td>{{element.ranking}}</td>
+                                <td>{{element.name}}</td>
+                                <td>{{element.coachName}}</td>
+                                <td>{{element.points}}</td>
+                                <td>{{element.wins}}</td>
+                                <td>{{element.defeats}}</td>
+                                <td>{{element.draws}}</td>
+                                <td>{{element.numOfMatchesPlayed}}</td>
+                                <td>{{element.totalReceivedGoals}}</td>
+                                <td>{{element.totalScoredGoals}}</td>
+                                <td>{{element.dateJoined | date : 'dd-MM-yyyy'}}</td>
+                            </tr>
+                    </tbody> 
+                </table>  
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 5%;">
+    <div class="card">
+        <h5 class="card-header">School Level</h5>
+        <div class="card - body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Ranking</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Coach Name</th>
+                            <th scope="col">Points</th>
+                            <th scope="col">Wins</th>
+                            <th scope="col">Defeats</th>
+                            <th scope="col">Draws</th>
+                            <th scope="col">Total Played</th>
+                            <th scope="col">Total Recieved Goals</th>
+                            <th scope="col">Total Scored Goals</th>
+                            <th scope="col">Joined Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor = "let element of schoolLevel">
+                                <td>{{element.ranking}}</td>
+                                <td>{{element.name}}</td>
+                                <td>{{element.coachName}}</td>
+                                <td>{{element.points}}</td>
+                                <td>{{element.wins}}</td>
+                                <td>{{element.defeats}}</td>
+                                <td>{{element.draws}}</td>
+                                <td>{{element.numOfMatchesPlayed}}</td>
+                                <td>{{element.totalReceivedGoals}}</td>
+                                <td>{{element.totalScoredGoals}}</td>
+                                <td>{{element.dateJoined | date : 'dd-MM-yyyy'}}</td>
+                            </tr>
+                    </tbody> 
+                </table>  
+        </div>
+    </div>
+</div>
